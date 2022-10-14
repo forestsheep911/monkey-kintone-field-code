@@ -2,7 +2,7 @@ const pj = require('../package.json')
 module.exports = {
   name: '快速查看kintone字段代码',
   namespace: `https://github.com/${pj.author}/monkey-${pj.name}`,
-  version: '0.1.0',
+  version: '1.0.0',
   description: pj.description,
   author: pj.author,
   copyright: pj.author,
