@@ -24,7 +24,7 @@
 
 node_modules/
 dist/*
-!/dist/kintone-field-code.user.js 
+# !/dist/kintone-field-code.user.js 
 npm-debug.log
 yarn-error.log
 
