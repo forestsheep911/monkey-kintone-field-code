@@ -16,7 +16,7 @@ module.exports = {
     'https://*.s.cybozu.com/k/*/show*',
     'https://*.s.kintone.com/k/*/show*',
   ],
-  require: ['ttps://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.all.min.js'],
+  require: [],
   'run-at': 'document-end',
   supportURL: pj.bugs.url,
   homepage: pj.homepage,
