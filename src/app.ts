@@ -13,9 +13,6 @@ const app = () => {
     const res = await kintone.api(kintone.api.url('/k/v1/app/form/fields.json', true), 'GET', params)
     return res
   }
-  function insertAfter(newNode: Node, referenceNode: Node) {
-    if (referenceNode.parentNode) referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling)
-  }
   async function mainWork() {
     const objFields = await getFields()
     const eleCommonLabels: NodeListOf<HTMLElement> = document.querySelectorAll('.control-label-gaia, .group-label-gaia')
