@@ -31,7 +31,7 @@ const app = () => {
         Swal.fire({
           title: showCode,
           toast: true,
-          position: 'bottom',
+          position: 'top',
           showConfirmButton: false,
           width: 520,
           padding: `0em`,
