@@ -2,7 +2,7 @@ const pj = require('../package.json')
 const { resolve } = require('path')
 module.exports = {
   name: pj.name,
-  namespace: `https://github.com/${pj.author}/monkey-${pj.name}`,
+  namespace: `https://github.com/forestsheep911/monkin-hodgepodge/blob/main/fast-see-field-code.js`,
   match: [
     'https://*.cybozu.cn/k/*/show*',
     'https://*.cybozu.com/k/*/show*',
