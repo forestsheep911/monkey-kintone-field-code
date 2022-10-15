@@ -13,7 +13,7 @@
 // @match               https://*.s.cybozu.cn/k/*/show*
 // @match               https://*.s.cybozu.com/k/*/show*
 // @match               https://*.s.kintone.com/k/*/show*
-// @require             ttps://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.all.min.js
+
 // @run-at              document-end
 // @supportURL          https://github.com/forestsheep911/monkey-kintone-field-code/issues
 // @homepage            https://github.com/forestsheep911/monkey-kintone-field-c0 ode#readme
