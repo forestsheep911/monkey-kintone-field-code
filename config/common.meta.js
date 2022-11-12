@@ -1,10 +1,10 @@
 const pj = require('../package.json')
 module.exports = {
   name: '快速查看kintone字段代码',
-  namespace: `https://github.com/${pj.author}/monkey-${pj.name}`,
-  version: '0.0.1',
+  namespace: `https://github.com/forestsheep911/monkin-hodgepodge/blob/main/fast-see-field-code.js`,
+  version: '1.0.2',
   description: pj.description,
-  author: pj.author,
+  author: 'bxu',
   copyright: pj.author,
   license: 'MIT',
   match: [
@@ -16,7 +16,7 @@ module.exports = {
     'https://*.s.cybozu.com/k/*/show*',
     'https://*.s.kintone.com/k/*/show*',
   ],
-  require: ['ttps://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.all.min.js'],
+  require: [],
   'run-at': 'document-end',
   supportURL: pj.bugs.url,
   homepage: pj.homepage,

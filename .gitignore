@@ -23,8 +23,8 @@
 # Recommended template: Node.gitignore
 
 node_modules/
-dist/*
-!/dist/kintone-field-code.user.js 
+dist/*.*
+!/dist/store/
 npm-debug.log
 yarn-error.log
 

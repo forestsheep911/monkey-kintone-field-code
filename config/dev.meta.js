@@ -2,7 +2,7 @@ const pj = require('../package.json')
 const { resolve } = require('path')
 module.exports = {
   name: pj.name,
-  namespace: `https://github.com/${pj.author}/monkey-${pj.name}`,
+  namespace: `https://github.com/forestsheep911/monkin-hodgepodge/blob/main/fast-see-field-code.js`,
   match: [
     'https://*.cybozu.cn/k/*/show*',
     'https://*.cybozu.com/k/*/show*',
@@ -13,5 +13,5 @@ module.exports = {
     'https://*.s.kintone.com/k/*/show*',
   ],
   grant: ['GM_getValue', 'GM_setValue', 'GM_addValueChangeListener', 'GM_addStyle'],
-  require: [`file://${resolve(__dirname, '../dist/').replaceAll('\\', '/')}${pj.name}.dev.user.js`],
+  require: [`file://${resolve(__dirname, '../dist/').replaceAll('\\', '/')}/${pj.name}.dev.user.js`],
 }
