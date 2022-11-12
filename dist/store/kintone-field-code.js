@@ -16,7 +16,7 @@
 
 // @run-at              document-end
 // @supportURL          https://github.com/forestsheep911/monkey-kintone-field-code/issues
-// @homepage            https://github.com/forestsheep911/monkey-kintone-field-c0 ode#readme
+// @homepage            https://github.com/forestsheep911/monkey-kintone-field-code#readme
 // @grant               GM_addStyle
 // @icon                https://img.icons8.com/ios/50/000000/happy-eyes.png
 // ==/UserScript==
