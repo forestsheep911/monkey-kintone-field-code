@@ -16,7 +16,7 @@ module.exports = {
     'https://*.s.cybozu.com/k/*/show*',
     'https://*.s.kintone.com/k/*/show*',
   ],
-  require: [],
+  require: ['https://cdn.jsdelivr.net/npm/sweetalert2@11'],
   'run-at': 'document-end',
   supportURL: pj.bugs.url,
   homepage: pj.homepage,
