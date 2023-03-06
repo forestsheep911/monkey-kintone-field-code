@@ -57,8 +57,63 @@ const app = () => {
       }
     }
   }
+
+  async function modifyFieldCode() {
+    const objFields = await getFields()
+    const eleCommonLabels: NodeListOf<HTMLElement> = document.querySelectorAll('.control-label-gaia, .group-label-gaia')
+    let showCode: string
+    let defaultBGColor: string
+    for (let i = 0; i < eleCommonLabels.length; i += 1) {
+      eleCommonLabels[i].style.cursor = 'copy'
+      eleCommonLabels[i].onmouseover = () => {
+        defaultBGColor = eleCommonLabels[i].style.backgroundColor
+        eleCommonLabels[i].style.backgroundColor = '#f2b36f'
+      }
+      //   Object.keys(objFields.properties).forEach((key) => {
+      //     if (eleCommonLabels[i].innerText === objFields.properties[key].label) {
+      //       showCode = objFields.properties[key].code
+      //     }
+      //   })
+      //   Swal.fire({
+      //     title: showCode,
+      //     toast: true,
+      //     position: 'top',
+      //     showConfirmButton: false,
+      //     width: 520,
+      //     padding: `0em`,
+      //     timer: 5000,
+      //   })
+      // }
+      // eleCommonLabels[i].onmouseout = () => {
+      //   Swal.close()
+      //   eleCommonLabels[i].style.backgroundColor = defaultBGColor
+      // }
+      eleCommonLabels[i].onclick = async () => {
+        Swal.fire({
+          title: 'new field code',
+          input: 'text',
+          inputAttributes: {
+            autocapitalize: 'off',
+          },
+          showCancelButton: true,
+          confirmButtonText: 'modify',
+          showLoaderOnConfirm: true,
+          preConfirm: () => {
+            console.log('click modify')
+          },
+          allowOutsideClick: () => !Swal.isLoading(),
+          timer: 4000,
+        })
+      }
+    }
+  }
   kintone.events.on('app.record.detail.show', function (event) {
     mainWork()
+    return event
+  })
+
+  kintone.events.on('app.record.edit.show', function (event) {
+    modifyFieldCode()
     return event
   })
 }
