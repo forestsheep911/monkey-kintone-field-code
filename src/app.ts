@@ -61,12 +61,12 @@ const app = () => {
   async function modifyFieldCode() {
     const objFields = await getFields()
     const eleCommonLabels: NodeListOf<HTMLElement> = document.querySelectorAll('.control-label-gaia, .group-label-gaia')
-    let showCode: string
-    let defaultBGColor: string
+    // let showCode: string
+    // let defaultBGColor: string
     for (let i = 0; i < eleCommonLabels.length; i += 1) {
       eleCommonLabels[i].style.cursor = 'copy'
       eleCommonLabels[i].onmouseover = () => {
-        defaultBGColor = eleCommonLabels[i].style.backgroundColor
+        // defaultBGColor = eleCommonLabels[i].style.backgroundColor
         eleCommonLabels[i].style.backgroundColor = '#f2b36f'
       }
       //   Object.keys(objFields.properties).forEach((key) => {
