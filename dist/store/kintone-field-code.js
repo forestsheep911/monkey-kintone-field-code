@@ -151,7 +151,7 @@ var app = function () {
     }
     function modifyFieldCode() {
         return __awaiter(this, void 0, void 0, function () {
-            var objFields, eleCommonLabels, showCode, defaultBGColor, _loop_2, i;
+            var objFields, eleCommonLabels, _loop_2, i;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -162,7 +162,7 @@ var app = function () {
                         _loop_2 = function (i) {
                             eleCommonLabels[i].style.cursor = 'copy';
                             eleCommonLabels[i].onmouseover = function () {
-                                defaultBGColor = eleCommonLabels[i].style.backgroundColor;
+                                // defaultBGColor = eleCommonLabels[i].style.backgroundColor
                                 eleCommonLabels[i].style.backgroundColor = '#f2b36f';
                             };
                             //   Object.keys(objFields.properties).forEach((key) => {
@@ -205,6 +205,8 @@ var app = function () {
                                 });
                             }); };
                         };
+                        // let showCode: string
+                        // let defaultBGColor: string
                         for (i = 0; i < eleCommonLabels.length; i += 1) {
                             _loop_2(i);
                         }
