@@ -59,7 +59,7 @@ const app = () => {
   }
 
   async function modifyFieldCode() {
-    const objFields = await getFields()
+    // const objFields = await getFields()
     const eleCommonLabels: NodeListOf<HTMLElement> = document.querySelectorAll('.control-label-gaia, .group-label-gaia')
     // let showCode: string
     // let defaultBGColor: string
