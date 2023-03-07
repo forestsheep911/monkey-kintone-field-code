@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                快速查看kintone字段代码
 // @namespace           https://github.com/forestsheep911/monkin-hodgepodge/blob/main/fast-see-field-code.js
-// @version             1.0.2
+// @version             1.0.3
 // @description         如果想查看字段code，以前一定要去后台管理界面，只是简单的看一个要点很多次很不友好，现在只要把鼠标放到元素题目上就可以看了。鼠标不动，单击就是拷贝code。暂时不支持subtable。
 // @author              bxu
 // @copyright           forestsheep911
