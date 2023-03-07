@@ -2,7 +2,7 @@ const pj = require('../package.json')
 module.exports = {
   name: '快速查看kintone字段代码',
   namespace: `https://github.com/forestsheep911/monkin-hodgepodge/blob/main/fast-see-field-code.js`,
-  version: '1.0.2',
+  version: '1.0.3',
   description: pj.description,
   author: 'bxu',
   copyright: pj.author,
