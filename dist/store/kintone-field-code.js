@@ -151,67 +151,62 @@ var app = function () {
     }
     function modifyFieldCode() {
         return __awaiter(this, void 0, void 0, function () {
-            var objFields, eleCommonLabels, _loop_2, i;
+            var eleCommonLabels, _loop_2, i;
             var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, getFields()];
-                    case 1:
-                        objFields = _a.sent();
-                        eleCommonLabels = document.querySelectorAll('.control-label-gaia, .group-label-gaia');
-                        _loop_2 = function (i) {
-                            eleCommonLabels[i].style.cursor = 'copy';
-                            eleCommonLabels[i].onmouseover = function () {
-                                // defaultBGColor = eleCommonLabels[i].style.backgroundColor
-                                eleCommonLabels[i].style.backgroundColor = '#f2b36f';
-                            };
-                            //   Object.keys(objFields.properties).forEach((key) => {
-                            //     if (eleCommonLabels[i].innerText === objFields.properties[key].label) {
-                            //       showCode = objFields.properties[key].code
-                            //     }
-                            //   })
-                            //   Swal.fire({
-                            //     title: showCode,
-                            //     toast: true,
-                            //     position: 'top',
-                            //     showConfirmButton: false,
-                            //     width: 520,
-                            //     padding: `0em`,
-                            //     timer: 5000,
-                            //   })
-                            // }
-                            // eleCommonLabels[i].onmouseout = () => {
-                            //   Swal.close()
-                            //   eleCommonLabels[i].style.backgroundColor = defaultBGColor
-                            // }
-                            eleCommonLabels[i].onclick = function () { return __awaiter(_this, void 0, void 0, function () {
-                                return __generator(this, function (_a) {
-                                    Swal.fire({
-                                        title: 'new field code',
-                                        input: 'text',
-                                        inputAttributes: {
-                                            autocapitalize: 'off',
-                                        },
-                                        showCancelButton: true,
-                                        confirmButtonText: 'modify',
-                                        showLoaderOnConfirm: true,
-                                        preConfirm: function () {
-                                            console.log('click modify');
-                                        },
-                                        allowOutsideClick: function () { return !Swal.isLoading(); },
-                                        timer: 4000,
-                                    });
-                                    return [2 /*return*/];
-                                });
-                            }); };
-                        };
-                        // let showCode: string
-                        // let defaultBGColor: string
-                        for (i = 0; i < eleCommonLabels.length; i += 1) {
-                            _loop_2(i);
-                        }
-                        return [2 /*return*/];
+                eleCommonLabels = document.querySelectorAll('.control-label-gaia, .group-label-gaia');
+                _loop_2 = function (i) {
+                    eleCommonLabels[i].style.cursor = 'copy';
+                    eleCommonLabels[i].onmouseover = function () {
+                        // defaultBGColor = eleCommonLabels[i].style.backgroundColor
+                        eleCommonLabels[i].style.backgroundColor = '#f2b36f';
+                    };
+                    //   Object.keys(objFields.properties).forEach((key) => {
+                    //     if (eleCommonLabels[i].innerText === objFields.properties[key].label) {
+                    //       showCode = objFields.properties[key].code
+                    //     }
+                    //   })
+                    //   Swal.fire({
+                    //     title: showCode,
+                    //     toast: true,
+                    //     position: 'top',
+                    //     showConfirmButton: false,
+                    //     width: 520,
+                    //     padding: `0em`,
+                    //     timer: 5000,
+                    //   })
+                    // }
+                    // eleCommonLabels[i].onmouseout = () => {
+                    //   Swal.close()
+                    //   eleCommonLabels[i].style.backgroundColor = defaultBGColor
+                    // }
+                    eleCommonLabels[i].onclick = function () { return __awaiter(_this, void 0, void 0, function () {
+                        return __generator(this, function (_a) {
+                            Swal.fire({
+                                title: 'new field code',
+                                input: 'text',
+                                inputAttributes: {
+                                    autocapitalize: 'off',
+                                },
+                                showCancelButton: true,
+                                confirmButtonText: 'modify',
+                                showLoaderOnConfirm: true,
+                                preConfirm: function () {
+                                    console.log('click modify');
+                                },
+                                allowOutsideClick: function () { return !Swal.isLoading(); },
+                                timer: 4000,
+                            });
+                            return [2 /*return*/];
+                        });
+                    }); };
+                };
+                // let showCode: string
+                // let defaultBGColor: string
+                for (i = 0; i < eleCommonLabels.length; i += 1) {
+                    _loop_2(i);
                 }
+                return [2 /*return*/];
             });
         });
     }
