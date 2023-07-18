@@ -1,7 +1,7 @@
 const { resolve } = require('path')
 const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
-const commonMeta = require('./common.meta.js')
+const commonMeta = require('./common.meta')
 
 const year = new Date().getFullYear()
 const getBanner = (meta) => `// ==UserScript==\n${Object.entries(Object.assign(commonMeta, meta))

@@ -3,9 +3,15 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { baseOptions, getBanner } = require('./webpack.config.base')
 const devBanner = require('./dev.meta.js')
+const fs = require('fs')
+const outputPath = path.resolve(__dirname, '../dist/dev')
+const monkeyHeader = `${devBanner.name}.header.js`
+
+fs.writeFile(path.join(outputPath, monkeyHeader), getBanner(devBanner), () => {})
 
 module.exports = () => {
-  baseOptions.output.filename = `${devBanner.name}.dev.user.js`
+  baseOptions.output.path = outputPath
+  baseOptions.output.filename = `${devBanner.name}.script.js`
   baseOptions.plugins.push(
     new webpack.BannerPlugin({
       banner: getBanner(devBanner),
@@ -14,12 +20,12 @@ module.exports = () => {
     }),
     new webpack.DefinePlugin({
       PRODUCTION: false,
-      FILENAME: JSON.stringify(`${devBanner.name}.dev.user.js`),
+      FILENAME: JSON.stringify(`${devBanner.name}.script.js`),
     }),
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      inject: 'body',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './public/index.html',
+    //   inject: 'body',
+    // }),
   )
   baseOptions.devServer = {
     static: [
